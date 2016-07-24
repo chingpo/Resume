@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>about</title>
+	<script type="text/javascript" src="./js/bootstrap.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+	 <script src="http://echarts.baidu.com/build/dist/echarts.js"></script>
+	<link rel="stylesheet" type="text/css" href="./css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="./css/style.css">
+<style type="text/css">
+
+
+.education{
+padding:60px 0;
+background:#eeeeee;
+}
+.edu-info h3{
+margin:0;
+color:#2b2b2b;
+font-size:36px;
+font-weight:500;
+letter-spacing: 18px;
+}
+
+.edu-grid p{
+margin:0px auto;
+color:#ffffff;
+font-size:18px;
+font-family: 'Lato', sans-serif;
+background:#b6dedc;
+width: 36%;
+padding: 3px 0;
+}
+.edu-grid span{
+margin:0px auto;
+display:block;
+color:#ffffff;
+font-size:18px;
+font-family: 'Lato', sans-serif;
+background:#52b4af;
+width: 36%;
+padding: 3px 0;
+}
+.edu-grid-master{
+
+background:#52b4af;
+padding: 15px 0;
+}
+.edu-grid-master h3{
+font-family: 'Lato', sans-serif;
+margin:0;
+font-size:18px;
+color:#4a4a4a;
+font-weight:700;
+line-height:1.8em;
+}
+.edu-grid-master h4{
+font-family: 'Lato', sans-serif;
+margin:10px 0 0 0;
+font-size:18px;
+color:#ffffff;
+font-weight: 600;
+}
+.edu-grid-info{
+background:#ffffff;
+padding: 25px 30px;
+}
+.edu-grid-info h5{
+font-family: 'Lato', sans-serif;
+line-height:1.8em;
+margin:0;
+font-size:18px;
+color:#888b90;
+font-weight:300;
+}
+.edu-border{
+border:1px solid #e2e2e2;
+margin-top:50px;
+border-radius: 6px;
+border-bottom: 2px solid #c3c3c3;
+}
+.edu-grids {
+  margin-top: 50px;
+}
+.edu-grid{
+position:relative;
+}
+.edu-grid img{
+position:absolute;
+top: 25%;
+left: 40%;
+}
+
+.work-info h3{
+  margin: 0;
+  color: #2b2b2b;
+  font-size: 36px;
+  font-weight: 500;
+  letter-spacing: 18px;
+}
+.work-experience{
+  padding: 60px 0;
+  background: #eeeeee;
+}
+.work-grids {
+  margin-top: 50px;
+}
+
+.work-skills{
+  padding: 60px 0;
+  background: #eeeeee;
+}
+
+
+
+
+
+.testimonials{
+background:#eeeeee;
+padding:60px 0;
+}
+.testimonials h3 {
+  margin: 0;
+  color: #2b2b2b;
+  font-size: 36px;
+  font-weight: 500;
+  letter-spacing: 18px;
+  text-align:center;
+}
+.test-left img{
+width:100%;
+}
+.test-left{
+float:left;
+  width: 40%;
+}
+.test-right{
+float:right;
+  width: 52%;
+}
+.test-right p{
+margin:25px 0 38px 0;
+font-size:16px;
+color:#4a4a4a;
+line-height:1.8em;
+font-family: 'Lato', sans-serif;
+font-weight:600;
+font-style:italic;
+}
+.test-right h4{
+margin:0;
+font-size:16px;
+color:#888b90;
+font-family: 'Lato', sans-serif;
+font-weight:400;
+}
+.test-banner {
+  background: #ffffff;
+  border-top: 15px solid #52b4af;
+  width: 54%;
+  height: 399px;
+  margin: 50px auto 0 auto;
+  padding: 82px 45px;
+  position:relative;
+}
+
+.test-banner img.quoa{
+position:absolute;
+top:14%;
+left:45%;
+}
+.test-banner img.quo{
+position:absolute;
+top:77%;
+left:45%;
+}
+/*--//process--*/
+/*-- Slider Part starts Here --*/
+#slider3,#slider4  {
+  box-shadow: none;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  margin: 0 auto;
+}
+.rslides_tabs {
+  list-style: none;
+  padding: 0;
+  background: rgba(0,0,0,.25);
+  box-shadow: 0 0 1px rgba(255,255,255,.3), inset 0 0 5px rgba(0,0,0,1.0);
+  -moz-box-shadow: 0 0 1px rgba(255,255,255,.3), inset 0 0 5px rgba(0,0,0,1.0);
+  -webkit-box-shadow: 0 0 1px rgba(255,255,255,.3), inset 0 0 5px rgba(0,0,0,1.0);
+  font-size: 18px;
+  list-style: none;
+  margin: 0 auto 50px;
+  max-width: 540px;
+  padding: 10px 0;
+  text-align: center;
+  width: 100%;
+}
+.rslides_tabs li {
+  display: inline;
+  float: none;
+  margin-right: 1px;
+}
+.rslides_tabs a {
+  width: auto;
+  line-height: 20px;
+  padding: 9px 20px;
+  height: auto;
+  background: transparent;
+  display: inline;
+}
+.rslides_tabs li:first-child {
+  margin-left: 0;
+}
+.rslides_tabs .rslides_here a {
+  background: rgba(255,255,255,.1);
+  color: #fff;
+  font-weight: bold;
+}
+.events {
+  list-style: none;
+}
+.callbacks_container {
+  position: relative;
+  float: left;
+  width: 100%;
+}
+.callbacks {
+  position: relative;
+  list-style: none;
+  overflow: hidden;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+.callbacks li {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 0;
+}
+.callbacks img {
+  position: relative;
+  z-index: 1;
+  height: auto;
+  border: 0;
+}
+.callbacks .caption {
+	display: block;
+	position: absolute;
+	z-index: 2;
+	font-size: 20px;
+	text-shadow: none;
+	color: #fff;
+	left: 0;
+	right: 0;
+	padding: 10px 20px;
+	margin: 0;
+	max-width: none;
+	top: 10%;
+	text-align: center;
+}
+.callbacks_nav {
+  	position: absolute;
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	top: 66%;
+	left: 0;
+	opacity: 0.7;
+	z-index: 3;
+	text-indent: -9999px;
+	overflow: hidden;
+	text-decoration: none;
+	height: 28px;
+	width: 20px;
+
+	margin-top: -65px;
+}
+.callbacks_nav:active {
+  opacity: 1.0;
+}
+a.callbacks_nav.callbacks1_nav.prev {
+	background: transparent url("./images/themes.png") no-repeat 0px 0px;
+  left: 13%;
+}
+.callbacks_nav.next {
+	background: transparent url("./images/themes.png") no-repeat -20px 0px;
+  left: 84%;
+}
+#slider3-pager a,#slider4-pager a  {
+  display: inline-block;
+}
+#slider3-pager span,#slider4-pager span{
+  float: left;
+}
+#slider3-pager span,#slider4-pager span{
+	width:100px;
+	height:15px;
+	background:#fff;
+	display:inline-block;
+	border-radius:30em;
+	opacity:0.6;
+}
+#slider3-pager .rslides_here a ,#slider4-pager .rslides_here a {
+  background: #FFF;
+  border-radius:30em;
+  opacity:1;
+}
+#slider3-pager a ,#slider4-pager a {
+  padding: 0;
+}
+#slider3-pager li, #slider4-pager li{
+	display:inline-block;
+}
+.rslides {
+  position: relative;
+  list-style: none;
+  overflow: hidden;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+.rslides li {
+  -webkit-backface-visibility: hidden;
+  position: absolute;
+  display: none;
+  width: 100%;
+  left: 0;
+  top: 0;
+}
+.rslides li{
+  position: relative;
+  display: block;
+  float: left;
+}
+
+.callbacks_tabs{
+	list-style: none;
+	position: absolute;
+	top: 73%;
+	z-index: 999;
+	left: 46%;
+	padding: 0;
+	margin: 0;
+}
+ul.callbacks_tabs.callbacks2_tabs {
+top: 73%;
+left:46%;
+}
+.slider-top{
+	text-align: center;
+	padding:10em 0;
+}
+.slider-top h1{
+	font-weight:700;
+	font-size:48px;
+	color:#010101;
+}
+.slider-top p{
+	font-weight:400;
+	font-size:20px;
+	padding:1em 7em;
+	color:#010101;
+}
+.slider-top ul.social-slide{
+	display:inline-flex;
+	margin: 0px;
+	padding: 0px;
+}
+ul.social-slide li i{
+	width:70px;
+	height:74px;
+	background:url(../images/img-resources.png)no-repeat;
+	display: inline-block;
+	margin:0px 15px;
+}
+ul.social-slide li i.win{
+	background-position:-6px 0px;
+}
+ul.social-slide li i.android{
+	background-position:-110px 0px;
+}
+ul.social-slide li i.mac{
+	background-position:-215px 0px;
+}
+.callbacks_tabs li{
+	display: inline-block;
+}
+@media screen and (max-width: 600px) {
+  .callbacks_nav {
+    top: 47%;
+    }
+}
+
+.callbacks_tabs a{
+ visibility: hidden;
+}
+.callbacks_tabs a:after {
+  content: "\f111";
+  font-size:0;
+  font-family: FontAwesome;
+  visibility: visible;
+  display: block;
+  height:14px;
+  width:14px;
+  display:inline-block;
+  background: #ffffff;
+  border-radius: 30px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -o-border-radius: 30px;
+  -ms-border-radius: 30px;
+}
+.callbacks_here a:after{
+	background: #99cc33;	
+}
+a.callbacks_nav.callbacks2_nav.prev {
+background: transparent url("../images/2.png") no-repeat left top;
+width:23px;
+height:23px;
+}
+a.callbacks_nav.callbacks2_nav.next{
+background: transparent url("../images/2.png") no-repeat -29px 0px;
+width:23px;
+height:23px;
+}
+a.callbacks_nav.callbacks2_nav.prev {
+left: 86% !important;
+top: 9%;
+}
+a.callbacks_nav.callbacks2_nav.next {
+right: 0% !important;
+top: 9%;
+}
+</style>
+</head>
+<body>
+<div class="nav" >
+<ul>
+	<li><a href="about.html">About</a></li>
+	<li><a href="resume.html">Resume</a></li>
+	<li><a href="home.html"><img src="./images/logo-final.png"></a></li>
+	<li><a href="pro.html">Project</a></li>
+	<li><a href="contact.html">Contact</a></li>
+</ul>
+</div>
+<div class="clear" ></div>
+		
+
+
+			<!-- 加上雷达图  改颜色-->
+<div class="education text-center">
+	<div class="container">
+		<div class="edu-info">
+			<h3>EDUCATION</h3>
+		</div>
+		<div class="strip text-center"><img src="images/edu.png" alt=" "/></div>
+		<div class="edu-grids">
+			<div class="col-md-4 edu-grid">
+				<p>2013 - 2017</p><span>Graduated</span>
+				<img src="images/arrow.png" alt=""/>
+				<div class="edu-border">
+					<div class="edu-grid-master">
+						<h3>Information Management and Information System</h3>
+						<h4>长春理工大学</h4>
+					</div>
+					<div class="edu-grid-info">
+						<h5>A great school for me.Give me much more than I  thought.</h5>
+					</div>
+				</div>
+			</div>
+		    <div class="col-md-8">
+		    	<iframe src="radar.html"  width="100%" height="350px" frameborder="0" scrolling="no"></iframe>
+		    </div>    
+		</div>
+	</div>
+			
+</div>
+<div class="clear"></div>
+
+
+	
+
+
+
+<!-- 做好切换  改颜色 -->
+<div class="testimonials" id="testimonial">
+	<div class="container">
+		<h3>TESTIMONIAL</h3>
+		<div class="strip text-center"><img src="images/test.png" alt=" "/></div>
+			<!-- responsiveslides -->
+					<script src="js/responsiveslides.min.js"></script>
+						<script>
+							// You can also use "$(window).load(function() {"
+							$(function () {
+							 // Slideshow 4
+							$("#slider3").responsiveSlides({
+								auto: true,
+								pager: false,
+								nav: true,
+								speed: 500,
+								namespace: "callbacks",
+								before: function () {
+							$('.events').append("<li>before event fired.</li>");
+							},
+							after: function () {
+								$('.events').append("<li>after event fired.</li>");
+								}
+								});
+								});
+						</script>
+			<!-- responsiveslides -->
+			<div  id="top" class="callbacks_container">
+					<ul class="rslides" id="slider3">
+						<li>
+							<div class="test-banner">
+								<img class="quoa" src="images/quo2.png" alt=""/>
+								<div class="test-left">
+									<img src="images/7.png" alt=""/>
+								</div>
+								<div class="test-right">
+									<p>However unreal it may seem, we are connected, 
+									you and I. We're on the same curve, just on opposite ends.</p>
+									<h4>Dong Yuanfang</h4>
+								</div>
+								<div class="clear"></div>
+								<img class="quo" src="images/quo1.png" alt=""/>
+							</div>
+						</li>
+						<li>
+							<div class="test-banner">
+								<img class="quoa" src="images/quo2.png" alt=""/>
+								<div class="test-left">
+									<img src="images/eee.png" alt=""/>
+								</div>
+								<div class="test-right">
+									<p>However unreal it may seem, we are connected, 
+									you and I. We're on the same curve, just on opposite ends.</p>
+									<h4>Feng Weiyi</h4>
+								</div>
+								<div class="clear"></div>
+								<img class="quo" src="images/quo1.png" alt=""/>
+							</div>
+						</li>
+					</ul>
+			</div>
+			
+	</div>
+</div>
+</div>
+
+<div class="clear"></div>
+
+
+<!-- 加上时间轴 -->
+
+<div class="work-experience text-center">
+	
+	<div class="container">
+		<div class="work-info">
+			<h3>EXPERIENCE</h3>
+		</div>
+		<div class="strip text-center"><img src="images/work.png" alt=" "/></div>
+		<div class="work-grids"></div>	
+	</div>
+	<iframe src="timeline.html" width="80%" height="600px" frameborder="0" scrolling="no"></iframe>
+</div>
+
+<div class="clear"></div>
+
+
+<div class="footer">
+		<div class="wrap">
+			<div class="social">
+				<ul>
+					<li><a href="#"><img src="./images/facebook.png"></a></li>
+					<li><a href="#"><img src="./images/twitter.png"> </a></li>
+					<li><a href="#"><img src="./images/vimeo.png"> </a></li>
+					<li><a href="#"><img src="./images/dribbble.png"> </a></li>
+					<li><a href="#"> <img src="./images/flickr.png"></a></li>
+					<div class="clear"> </div>
+				</ul>
+			</div>
+		</div>
+</div>
+<div class="copy-right">
+	<p>Direct by <a href="#">© Yan Jingbo 2016</a></p>	    
+</div>
+
+
+</body>
+</html>

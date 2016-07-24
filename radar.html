@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <title>ECharts</title>
+     <script src="http://echarts.baidu.com/build/dist/echarts.js"></script>
+</head>
+<body>
+    <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+    <div id="radar" style="height:350px"></div>
+    <!-- ECharts单文件引入 -->
+   
+    <script type="text/javascript">
+        // 路径配置
+        require.config({
+            paths: {
+                echarts: 'http://echarts.baidu.com/build/dist'
+            }
+        });
+        
+        // 使用
+        require(
+            [
+                'echarts',
+                'echarts/chart/radar',
+                 'echarts/theme/macarons'  // 使用柱状图就加载bar模块，按需加载
+            ],
+            function (ec) {
+                // 基于准备好的dom，初始化echarts图表
+                var myChart = ec.init(document.getElementById('radar'),'macarons'); 
+                
+                var option = {
+    title : {
+        text: '成绩（score）',
+        subtext: '大学'
+    },
+    tooltip : {
+        trigger: 'axis'
+    },
+    legend: {
+        orient : 'vertical',
+        x : 'right',
+        y : 'bottom',
+        data:['大一成绩（score1）','大二成绩（score2）']
+    },
+    toolbox: {
+        show : true,
+        feature : {
+            mark : {show: true},
+            dataView : {show: true, readOnly: false},
+            restore : {show: true},
+            saveAsImage : {show: true}
+        }
+    },
+    polar : [
+       {
+           indicator : [
+               { text: '销售（sales）', max: 100},
+               { text: '管理（Administration）', max: 100},
+               { text: '信息技术（Information Techology）', max: 100},
+               { text: '经济（Economic）', max:  100},
+               { text: '研发（Development）', max:  100},
+               { text: '市场（Marketing）', max: 100}
+            ]
+        }
+    ],
+    calculable : true,
+    series : [
+        {
+            name: '大学成绩情况',
+            type: 'radar',
+            data : [
+                {
+                    value : [70,  75,  91,  83,  66,  89],
+                    name : '大一成绩（score1）'
+                } ,
+                {
+                    value : [80,  85,  96,  73,  76,  79],
+                    name : '大二成绩（score2）'
+                }           
+            ]
+        }
+    ]
+};
+                // 为echarts对象加载数据 
+                myChart.setOption(option); 
+            }
+        );
+    </script>
+</body>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+<span id="abc">1</span>
+    <script type="text/javascript">
+window.onload = function() {
+    // 数字到达 100 后还原为 1
+    var max = 100,
+        o = document.getElementById('abc');
+        var chrome = /chrome/i.test(navigator.userAgent);
+                         
+    // 获取保存的数据
+    if(chrome) {
+        data_num = sessionStorage.getItem("num") || "";
+    }
+    else {
+        data_num = document.cookie.replace(
+        /(?:(?:^|.*;\s*)num\s*\=\s*((?:[^;](?!;))*[^;]?).*)|.*/,
+        "$1");
+    }
+    var num_now = parseInt(data_num) || 0;
+                         
+    o.innerHTML = num_now + 1;
+                         
+    // 每 0.1 秒更新一次数字，并保存数据
+    setInterval(function() {
+        num_now = num_now >= max ? 1 : num_now + 1;
+        o.innerHTML = num_now;
+        if(chrome) {
+            sessionStorage.setItem("num", num_now);
+        }
+        else {
+            document.cookie = "num=" + num_now + ";path=/;";
+        }
+    }, 100);
+};
+</script>
+</body>
+</html>

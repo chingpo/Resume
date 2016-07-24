@@ -1,0 +1,119 @@
+*{
+		padding: 0px;
+		margin: 0px;
+	}
+/*  head*/
+  body{
+  	font-size:18px;
+  	font-family: "微软雅黑"，arial,sans-serif;
+  	background-color: #F5F5F5; /*全局背景*/
+  }
+  .nav{
+  	background-color: #9c6a8d;/*导航背景*/
+  	margin: 0 auto;/*水平居中*/
+  	height: 80px;
+  	width: 100%;/*导航高度和宽度*/
+  }
+  .nav ul{
+  	margin-left: 100px;
+  }
+  .nav li{
+  	list-style: none;
+  	float: left;/*去掉小黑点并且水平摆放*/
+  	width: 250px;/*给每个列表一个宽度，平分导航条宽度*/
+  	line-height: 80px;
+  	text-align: center;/*文字水平居中，给定行高，和导航条宽度设置一样，达到垂直居中*/
+  }
+  .nav li a{
+  	text-decoration: none;
+  	color: #fff;
+  	font-weight: bold;/*加粗*/
+  }
+  .nav li a:hover{
+  	color: #8b1c55;
+  }
+
+.clear{clear:both;height:0;overflow:hidden;}
+
+/*  foot*/
+    .footer
+{
+  background: #6C5468;
+  margin-top:45px;
+
+}
+.wrap{
+  margin:0 auto;
+  width:100%;
+}
+.social{
+  text-align: center;
+  padding: 3% 0%;
+  margin: 0 auto;
+  width: 37%;
+  position: relative;
+  height: 40px;
+
+}
+.social ul li{
+  float: left;
+  margin-right: 25px;
+
+}
+.social ul li:nth-child(5)
+{
+  margin-right: 0px;
+}
+.social  ul{
+  position: absolute ;
+  top: 13px;
+  padding: 1em 0.5em;
+  border-radius: 2px;
+  margin-left:57px;
+
+}
+.social  ul li{
+  list-style: none;
+  background: #9D919B;
+  border-radius:50px;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.social  ul li a{
+  padding:1.2em;
+  display:block;
+  vertical-align: middle; 
+}
+.social ul li a img{
+  vertical-align: middle;
+}
+.social  ul li:hover{
+  background: #fff;
+}
+/*----copy-right----*/
+.copy-right{
+  background: #9c6a8d;
+  text-align: center;
+}
+.copy-right p{
+  color:#6C5468;
+}
+.copy-right p a{
+  color:#fff;
+  transition:0.5s all;/*0.5s改变颜色*/
+  -webkit-transition:0.5s all;/* Firefox 4 */
+  -moz-transition:0.5s all;/* Safari 和 Chrome */
+  -o-transition:0.5s all;/* Opera */
+}
+.copy-right p a:hover{
+  color:#6C5468;/*鼠标覆盖变色*/
+}
+.copy-right {
+  padding: 1em 0;/*16px http://www.uml.org.cn/html/201207311.asp*/
+}
+
+
+/*  pro*/
+  
